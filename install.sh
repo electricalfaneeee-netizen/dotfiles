@@ -12,6 +12,7 @@ PACKAGES=(
     "noto-fonts"
     "inter-font"
     "ttf-nerd-fonts-symbols"
+    "ttf-hack-nerd"
     "kitty"
     "uwsm"
     "libnewt"
@@ -21,6 +22,16 @@ PACKAGES=(
     "quickshell"
     "mako"
     "starship"
+    "copyq"
+    "yazi"
+    "ffmpeg"
+    "7zip"
+    "jq"
+    "fd"
+    "ripgrep"
+    "resvg"
+    "imagemagick"
+    "rofi"
 )
 
 install_packages() {
