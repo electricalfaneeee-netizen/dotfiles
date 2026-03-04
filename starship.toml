@@ -1,0 +1,84 @@
+# ==================================================
+# Dark Sage Monochrome Starship Prompt
+# ==================================================
+
+add_newline = false
+command_timeout = 800
+
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+# ---------------- OS ----------------
+[os]
+disabled = false
+style = "fg:#7E8F83"
+symbols = { Arch = " " }
+
+# ---------------- User / Host ----------------
+[username]
+show_always = true
+style_user = "fg:#E6E8E5"
+style_root = "fg:#B86A64"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "fg:#A7AAA8"
+format = "[@$hostname]($style) "
+
+# ---------------- Directory ----------------
+[directory]
+style = "fg:#7E8F83"
+read_only_style = "fg:#C2AA72"
+format = "[$path]($style) "
+truncation_length = 3
+truncate_to_repo = true
+
+# ---------------- Git ----------------
+[git_branch]
+symbol = " "
+style = "fg:#5F7064"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "fg:#8F7A76"
+format = "[$all_status$ahead_behind]($style) "
+
+# ---------------- Command Duration ----------------
+[cmd_duration]
+min_time = 500
+style = "fg:#948B79"
+format = "[󱎫 $duration]($style) "
+
+# ---------------- Prompt Character ----------------
+[character]
+success_symbol = "[❯](fg:#7AA487)"
+error_symbol = "[❯](fg:#B86A64)"
+vimcmd_symbol = "[❮](fg:#7E8F83)"
+
+# ---------------- Fill ----------------
+[fill]
+symbol = " "
+
+# ---------------- Disable Noise ----------------
+[package]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[python]
+disabled = true
