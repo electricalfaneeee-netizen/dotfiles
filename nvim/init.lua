@@ -1,0 +1,8 @@
+vim.cmd.colorscheme("sage_calm")
+require("config.options")
+require("config.keybinds")
+require("config.lazy")
+require'colorizer'.setup()
+require("config.cmp")
+require("config.neotree")
+require("nvim-autopairs")
