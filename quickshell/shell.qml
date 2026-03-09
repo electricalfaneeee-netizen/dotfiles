@@ -31,7 +31,6 @@ Variants {
             anchors.fill: parent
             border.color: Visual.selected
             border.width: 4
-            radius: 20
         
             color: Qt.alpha(Visual.panel, 0.95)
 
