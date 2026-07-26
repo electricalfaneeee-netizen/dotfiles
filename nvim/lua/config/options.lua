@@ -6,3 +6,4 @@ vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = "menu,menuone,noinsert,noselect"
 vim.opt.pumheight = 8
+vim.opt.signcolumn = "yes"

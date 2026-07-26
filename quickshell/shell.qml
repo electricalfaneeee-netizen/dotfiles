@@ -2,6 +2,7 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
 import Quickshell.Hyprland
+import Quickshell.Widgets
 import QtQuick
 import QtQuick.Effects
 import QtQuick.Layouts
@@ -13,24 +14,19 @@ Variants {
     PanelWindow {
 
         id: root
-	WlrLayershell.namespace: "qs_bar"
 
         anchors.left: true
         anchors.right: true
         anchors.top: true
 
-	margins.left: 15
-	margins.right: 15
-	margins.top: 12
-
         implicitHeight: 90
 
         color: "transparent"
 
-        Rectangle {
+        ClippingRectangle {
             anchors.fill: parent
-            border.color: Visual.selected
-            border.width: 4
+	    bottomLeftRadius: 25
+	    bottomRightRadius: 25
         
             color: Qt.alpha(Visual.panel, 0.95)
 
