@@ -56,3 +56,4 @@ ln -sr ~/.dotfiles/hypr/ ~/.config/hypr
 ln -sr ~/.dotfiles/quickshell/ ~/.config/quickshell
 ln -sr ~/.dotfiles/mako/ ~/.config/mako
 ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
+ln -sr ~/.dotfiles/kitty/ ~/.config/kitty
