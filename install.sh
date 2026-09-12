@@ -12,7 +12,7 @@ PACKAGES=(
     "noto-fonts"
     "inter-font"
     "ttf-nerd-fonts-symbols"
-    "ttf-hack-nerd"
+    "ttc-iosevka-ss14"
     "kitty"
     "uwsm"
     "libnewt"
@@ -57,3 +57,4 @@ ln -sr ~/.dotfiles/quickshell/ ~/.config/quickshell
 ln -sr ~/.dotfiles/mako/ ~/.config/mako
 ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 ln -sr ~/.dotfiles/kitty/ ~/.config/kitty
+ln -sr ~/.dotfiles/rofi/ ~/.config/rofi

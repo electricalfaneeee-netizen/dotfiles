@@ -1,0 +1,113 @@
+/* ROUNDED THEME FOR ROFI */
+/* Sage Dark Monochrome - 4K Scaled */
+
+/* ===== Palette ===== */
+* {
+    font:   "Inter 24";
+
+    bg0: #1E1F1D;
+    bg1: #2B2D2B;
+    bg2: #3D403E;
+    bg3: #5F7064;
+
+    fg0: #E6E8E5;
+    fg1: #CFCFCD;
+    fg2: #A7AAA8;
+    fg3: #7E8F83;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+/* ===== Window ===== */
+window {
+    location:       north;
+    y-offset:       calc(50% - 352px); /* 176 * 2 */
+    width:          1280;
+    border-radius:  48px;
+
+    background-color:   @bg0;
+}
+
+/* ===== Layout ===== */
+mainbox {
+    padding:    24px;
+}
+
+/* ===== Input Bar ===== */
+inputbar {
+    background-color:   @bg1;
+    border-color:       @bg3;
+
+    border:         4px;
+    border-radius:  32px;
+
+    padding:    16px 32px;
+    spacing:    16px;
+    children:   [ prompt, entry ];
+}
+
+prompt {
+    text-color: @fg2;
+}
+
+entry {
+    placeholder:        "Search";
+    placeholder-color:  @fg3;
+}
+
+/* ===== Message ===== */
+message {
+    margin:             24px 0 0;
+    border-radius:      32px;
+    border-color:       @bg2;
+    background-color:   @bg2;
+}
+
+textbox {
+    padding:    16px 48px;
+}
+
+/* ===== List ===== */
+listview {
+    background-color:   transparent;
+
+    margin:     24px 0 0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height: false;
+}
+
+/* ===== Elements ===== */
+element {
+    padding:        16px 32px;
+    spacing:        16px;
+    border-radius:  32px;
+}
+
+/* 🌿 Hover (new subtle sage tint) */
+element normal active, element alternate active {
+    background-color: #2F3431; /* soft sage-gray hover */
+}
+
+/* Selected */
+element selected normal, element selected active {
+    background-color:   @bg3;
+    text-color:         @fg0;
+}
+
+/* Icons */
+element-icon {
+    size:           2em;
+    vertical-align: 0.5;
+}
+
+/* Text */
+element-text {
+    text-color: inherit;
+}
