@@ -58,3 +58,4 @@ ln -sr ~/.dotfiles/mako/ ~/.config/mako
 ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 ln -sr ~/.dotfiles/kitty/ ~/.config/kitty
 ln -sr ~/.dotfiles/rofi/ ~/.config/rofi
+ln -s ~/.dotfiles/.bashrc ~/.bashrc
