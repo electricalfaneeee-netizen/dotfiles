@@ -2,8 +2,8 @@ return {
     "goolord/alpha-nvim",
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-	local dashboard = require("alpha.themes.dashboard")
-	dashboard.section.header.val = vim.split([[
+	local theta = require("alpha.themes.theta")
+	theta.header.val = vim.split([[
 	╔═══════════════════════════════════════════════════════════════════╗
 	║                                                                   ║
 	║                                             ███                   ║
@@ -17,7 +17,7 @@ return {
 	║                                                                   ║
 	╚═══════════════════════════════════════════════════════════════════╝
 	]], '\n', {trimempty = true})
-	require'alpha'.setup(require'alpha.themes.dashboard'.config)
+	require'alpha'.setup(require'alpha.themes.theta'.config)
 	require("alpha.themes.startify").file_icons.provider = "devicons"
     end
 }
