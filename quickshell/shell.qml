@@ -26,7 +26,9 @@ Variants {
         ClippingRectangle {
             anchors.fill: parent
 	    bottomLeftRadius: 25
-	    bottomRightRadius: 25
+	    bottomRightRadius: PanelState.isOpen ? 0 : 25
+
+	    Behavior on bottomRightRadius { NumberAnimation { duration: 125 } }
         
             color: Qt.alpha(Visual.panel, 0.95)
 
@@ -48,12 +50,12 @@ Variants {
                     Layout.fillWidth: true
                 }
             
-                SidePanelButton {}
+                SysInfo {}
 
                 MenuButton {}
 
                 Item {
-                    implicitWidth: 20
+                    implicitWidth: 10
                 }
             }
         }

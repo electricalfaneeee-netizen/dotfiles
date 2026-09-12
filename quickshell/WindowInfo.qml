@@ -11,16 +11,24 @@ Text {
 
     Layout.preferredWidth: 800
 
-    text: "  |   " + currentLayout + "   |  " + activeWindow
+    textFormat: Text.StyledText
+    text: "<font color=\"" + Visual.secondaryText.toString() +  "\"> | <font>" + "<font color=\"" + Visual.primaryText.toString() + "\">currentLayout<font>" + "<font color=\"" + Visual.secondaryText.toString() +  "\"> | <font>" + "<font color=\"" + Visual.primaryText.toString() + "\">activeWindow<font>"
     elide: Text.ElideRight
     color: Visual.primaryText
     font { family: Visual.fontFamily; pixelSize: 28; bold: true }
+
+    Timer {
+	interval: 250
+	repeat: true
+	running: true
+	triggeredOnStart: true
+	onTriggered: (activeWindowProc.start(), layoutProc.start())
+    }
 
     Process {
         id: activeWindowProc
         command: ["sh", "-c", "hyprctl activewindow -j | jq -r '.title // empty'"]
         running: true
-        onRunningChanged: if (!running) running = true
 
 	stdout: SplitParser {
 	    onRead: data => {
@@ -37,7 +45,6 @@ Text {
         id: layoutProc
         command: ["sh", "-c", "hyprctl activewindow -j | jq -r 'if .floating then \"Floating\" else \"Tiled\" end'"]
         running: true
-        onRunningChanged: if (!running) running = true
 
 	stdout: SplitParser {
 	    onRead: data => {

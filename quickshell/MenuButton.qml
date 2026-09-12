@@ -8,7 +8,7 @@ Rectangle {
     implicitHeight: 60
     implicitWidth: 80
 
-    color: "transparent"
+    color: Visual.surface
 
     radius: 20
 
@@ -23,7 +23,7 @@ Rectangle {
         anchors.fill: parent
         hoverEnabled: true
         onEntered: PropertyAnimation { target: menuButton; property: "color"; to: Visual.hover; duration: 100 }
-        onExited: PropertyAnimation { target: menuButton; property: "color"; to: "transparent"; duration: 100 }
+        onExited: PropertyAnimation { target: menuButton; property: "color"; to: Visual.surface; duration: 100 }
         
         Process {
             id: rofi

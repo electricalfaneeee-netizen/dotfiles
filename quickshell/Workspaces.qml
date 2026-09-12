@@ -13,25 +13,24 @@ Repeater {
     	property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
 
     	Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-    	implicitHeight: isActive ? 60 : 30
-    	implicitWidth: isActive ? 100 : 30
+    	implicitHeight: 30
+    	implicitWidth: isActive ? 150 : 30
     	color: isActive ? Visual.selected : (ws ? Visual.lightTint : Visual.surface)
     	radius: 67
 
-    	Behavior on implicitWidth { PropertyAnimation { duration: 35 } }
-    	Behavior on implicitHeight { PropertyAnimation { duration: 35 } }
-    	Behavior on color { PropertyAnimation { duration: 35 } }
+    	Behavior on implicitWidth { NumberAnimation { duration: 50 } }
+    	Behavior on color { ColorAnimation { duration: 35 } }
 
-        Text {
-            anchors.centerIn: parent
-            text: isActive ? index + 1 : ""
-            color: Visual.primaryText
-            font { family: Visual.fontFamily; pixelSize: 22; bold: true}
-        }
+        // Text {
+        //     anchors.centerIn: parent
+        //     text: isActive ? index + 1 : ""
+        //     color: Visual.primaryText
+        //     font { family: Visual.fontFamily; pixelSize: 22; bold: true}
+        // }
 
 	MouseArea {
 	    anchors.fill: parent
-	    onClicked: Hyprland.dispatch(`workspace ${index + 1}`)
+	    onClicked: Hyprland.dispatch(`hl.dsp.focus({ workspace = ${index + 1} })`)
 	}
     }
 }
