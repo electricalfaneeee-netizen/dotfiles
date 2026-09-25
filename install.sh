@@ -32,6 +32,8 @@ PACKAGES=(
     "resvg"
     "imagemagick"
     "rofi"
+    "pyright"
+    "hyprshot"
 )
 
 install_packages() {
